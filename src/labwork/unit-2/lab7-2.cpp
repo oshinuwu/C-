@@ -29,7 +29,7 @@ int main(){
         cout<<"= "<<res;
         }
         else {
-            cout<<"invalid";
+            cout<<"invalid (not divisible by 0)";
         }
         break;
 

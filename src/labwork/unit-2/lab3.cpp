@@ -7,8 +7,8 @@ using namespace std;
 
 int main(){
     int r=5;
-    int area=(4/3)*PI*(pow(r,3));
-    cout<<"The area of the sphere is "<<area<<endl;
+    int area=PI*pow(r,2);
+    cout<<"The area of the circle is "<<area<<endl;
 
     cout<<"Name: Oshin Pant Roll NO:23 Lab_no:3";
     cin.get();
