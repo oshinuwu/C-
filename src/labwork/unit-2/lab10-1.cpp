@@ -5,7 +5,7 @@ multiplication, or division). If no operation is provided, the calculator should
 Display the result of the operation.*/
 #include<iostream>
 using namespace std;
-void calculator(char opt='+', int a=0, int b=0){
+void calculator(char opt='+', float a=0, float b=0){
     switch(opt){
         case '+':
         cout<<"the sum is "<<a+b;
@@ -34,7 +34,7 @@ void calculator(char opt='+', int a=0, int b=0){
     }
 }
 int main(){
-    int n1,n2;
+    float n1,n2;
     char o;
     cout<<"Calculator :"<<endl;
     cout<<"\n\nEnter 2 numbers to be used on calculator : ";
