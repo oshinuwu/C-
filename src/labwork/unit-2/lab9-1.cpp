@@ -4,7 +4,7 @@ and the operation they want to perform (addition, subtraction, multiplication, o
 using inline functions, calculate and display the result of the selected operation.*/
 #include<iostream>
 using namespace std;
-inline float sum(float a, int b){return a+b;}
+inline float sum(float a, float b){return a+b;}
 inline float difference(float a,float b){return a-b;}
 inline float product(float a,float b){return a*b;}
 inline float quotient(float a,float b)
@@ -12,7 +12,7 @@ inline float quotient(float a,float b)
 { 
     return a/b;
     }else {
-        cout<<"inavlid";
+        cout<<"invalid"; 
     }
 }
 int main(){
