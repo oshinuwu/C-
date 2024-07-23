@@ -1,14 +1,6 @@
 #include<iostream>
 using namespace std;
-void Swap(int a,int b){ //user defined function
-    int ab;
-    ab=a;
-    a=b;
-    b=ab;
-    cout<<"\n\nAfter swapping :"<<endl
-        <<"1st number : "<<a<<endl
-        <<"2nd number : "<<b<<endl;
-}
+
 void Swap1(int a,int b){
      swap(a,b);//library function within a user defined function
       cout<<"\n\nAfter swapping :"<<endl
@@ -22,7 +14,7 @@ int main(){
     cout<<"2nd number : ";
     cin>>y; 
     
-    Swap(x,y);
+    
     Swap1(x,y);
     
     cout<<"\nName: Oshin Pant Roll NO:23 Lab_no:19";

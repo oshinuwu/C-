@@ -21,11 +21,11 @@ int main(){
     cin>>input;
     switch(input){
         case 'h':
-        ptr=Half;
+        ptr=&Half;
         break;
 
         case 'd':
-        ptr = Double;
+        ptr =&Double;
         break;
 
         default:

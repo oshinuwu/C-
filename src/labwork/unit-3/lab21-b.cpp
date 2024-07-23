@@ -17,7 +17,7 @@ class rectangle{
         cout<<"Length of the rectangle : "<<rec.getlength()<<endl;
         cout<<"Width of the rectangle : "<<rec.getwidth();
 
-    cout<<"\nName: Oshin Pant Roll NO:23 Lab_no:21-a";
+    cout<<"\nName: Oshin Pant Roll NO:23 Lab_no:21-b";
     fflush(stdin);
     cin.get();
         return 0;

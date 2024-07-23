@@ -10,7 +10,6 @@ class bank_account{
         acc_type=b;
         acc_number=c;
         balance=d;
-
     }
     void initial(){
         cout<<"\nAccount number : "<<acc_number<<endl
@@ -18,26 +17,19 @@ class bank_account{
         <<"Account type : "<<acc_type<<endl
         <<"Balance : "<<balance<<endl;
     }
-
     void deposit(int plus){
         balance +=plus;
         cout<<"\n\nYou have depositted rs "<<plus<<". Your current balance is rs "<<balance;
-
-
     }
     void withdraw(int minus){
         if(minus>balance){
             cout<<"\n\nNot enough balance!";
-
         }
         else{
             balance-=minus;
             cout<<"\n\nYou have withdrawn rs "<<minus<<". Your current balance is rs "<<balance;
         }
-
     }
-
-
 };
 int main(){
     string n,type;

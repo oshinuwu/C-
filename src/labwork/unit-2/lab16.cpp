@@ -44,16 +44,6 @@ int main() {
     // Example 3: Create space for an array of Person objects using pointers
     Person* people = new Person[3];
 
-    // Initialize the Person objects
-    people[0] = Person("abc", 25);
-    people[1] = Person("xyz", 30);
-    people[2] = Person("pqr", 35);
-
-    // Use the Person objects
-    for (int i = 0; i < 3; i++) {
-        people[i].printInfo();
-    }
-
     // Don't forget to delete the array when you're done with it!
     delete[] people;
 
