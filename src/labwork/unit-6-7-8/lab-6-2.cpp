@@ -20,8 +20,8 @@ public:
     }
 };
 
-// Concrete class Rectangle that inherits from Shape
-class Rectangle : public Shape {
+// Concrete class Rectangle that inherits from virtual class circle
+class Rectangle :virtual  public Circle {
 public:
     // Override the draw function to draw a rectangle
     void draw() override {
@@ -35,8 +35,8 @@ int main() {
     shape->draw(); // Output: Drawing a circle.
 
     // Point the Shape pointer to a Rectangle object
-    shape = new Rectangle();
-    shape->draw(); // Output: Drawing a rectangle.
+    Circle* c1 = new Rectangle();
+    c1->draw(); // Output: Drawing a rectangle.
      cout << "\nName: Oshin Pant Roll NO:23 Lab_no:6.2";
     fflush(stdin);
     cin.get();
