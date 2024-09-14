@@ -1,18 +1,27 @@
 #include <iostream>
-#include <stdexcept>
+
 using namespace std;
 
 int main() {
-  try {
-    throw runtime_error("Runtime error");
-  } catch (const exception& e) {
-    cerr << "Caught an exception: " << e.what() << endl;
-  } catch (...) {
-    cerr << "Caught an unknown exception." << endl;
-  }
+    int dividend = 5;
+    int divisor = 0;
 
-cout << "\nName: Oshin Pant Roll NO:23 Lab_no:7.5";
+    try {
+        if (divisor == 0) {
+            throw runtime_error("Division by zero!");
+        }
+        int result = dividend / divisor;
+        cout << "Result: " << result << endl;
+    } catch (const runtime_error& e) {
+        // Catch runtime error
+        cout << "Caught runtime error: " << e.what() << endl;
+    } catch (...) {
+        // Catch any other exceptions
+        cout << "Caught unknown exception" << endl;
+    }
+
+    cout << "\nName: Oshin Pant Roll NO:23 Lab_no:7.5";
     fflush(stdin);
     cin.get();
-  return 0;
+    return 0;
 }

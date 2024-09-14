@@ -7,8 +7,8 @@ T sum(T a, T b) {
 }
 
 int main() {
-  int a = 5, b = 10;
-  double c = 2.5, d = 7.8;
+  int a = 15, b = 20;
+  double c = 8.5, d = 7.8;
 
   cout << "Sum of integers: " << sum(a, b) << endl;
   cout << "Sum of doubles: " << sum(c, d) << endl;

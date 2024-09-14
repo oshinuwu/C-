@@ -14,8 +14,8 @@ public:
 };
 
 int main() {
-  MyPair<int> intPair(1, 2);
-  MyPair<double> doublePair(3.14, 2.71);
+  MyPair<int> intPair(1, 7);
+  MyPair<double> doublePair(3.14, 2.91);
 
   intPair.print();
   doublePair.print();
