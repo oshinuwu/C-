@@ -8,8 +8,9 @@ int main() {
     if (divisor != 0) {
         int x = 5 / divisor;
     } else {
-        cout << "Error: Division by zero!" << endl;
+        throw runtime_error("Error: Division by zero!");
     }
+   
 } catch (...) {
     cout << "Caught an exception" << endl;
 }

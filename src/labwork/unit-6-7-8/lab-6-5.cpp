@@ -1,48 +1,48 @@
 #include <iostream>
+
 using namespace std;
 
-// Abstract base class Calculator with a pure virtual function calculate()
-class Calculator {
+// Base class
+class Shape {
 public:
-    // Pure virtual function calculate() that must be overridden by derived classes
-    virtual int calculate(int num1, int num2) = 0;
-};
-
-// Derived class ArithmeticCalculator that inherits from Calculator
-class ArithmeticCalculator : public Calculator {
-public:
-    // Function overriding: overriding the calculate() function from the base class
-    // This function will be called when we use the Calculator pointer to an ArithmeticCalculator object
-    int calculate(int num1, int num2) override {
-        return num1 + num2; // default calculation is sum
+    virtual void draw() {
+        cout << "Drawing a shape." << endl;
     }
 
-    // Function overloading: providing an additional calculate() function with a different signature
-    // This function takes an additional char argument to specify the operation
-    int calculate(int num1, int num2, char operation) {
-        if (operation == '+') {
-            return num1 + num2;
-        } else if (operation == '-') {
-            return num1 - num2;
-        } else {
-            cout << "Error: Invalid operation!" << endl;
-            return 0;
-        }
+    // Overloaded function
+    void calculateArea(int side) {
+        cout << "Area of the shape with side " << side << " is " << side * side << endl;
+    }
+
+    void calculateArea(int length, int width) {
+        cout << "Area of the shape with length " << length << " and width " << width << " is " << length * width << endl;
+    }
+};
+
+// Derived class
+class Circle : public Shape {
+public:
+    // Overriding the draw function
+    void draw() override {
+        cout << "Drawing a circle." << endl;
+    }
+
+    // Overloaded function
+    void calculateArea(int radius) {
+        cout << "Area of the circle with radius " << radius << " is " << 3.14 * radius * radius << endl;
     }
 };
 
 int main() {
-    // Create a Calculator pointer to an ArithmeticCalculator object
-    Calculator* calculator = new ArithmeticCalculator();
-    int result = calculator->calculate(5, 3); // Output: 8 (default sum, using the overridden function)
-    cout << "Result: " << result << endl;
+    Shape* shape = new Shape();
+    shape->draw();  // Output: Drawing a shape.
+    shape->calculateArea(5);  // Output: Area of the shape with side 5 is 25
+    shape->calculateArea(4, 5);  // Output: Area of the shape with length 4 and width 5 is 20
 
-    // Cast the Calculator pointer to an ArithmeticCalculator pointer to access the overloaded function
-    ArithmeticCalculator* arithmeticCalculator = static_cast<ArithmeticCalculator*>(calculator);
-    result = arithmeticCalculator->calculate(5, 3, '+'); // Output: 8 (sum, using the overloaded function)
-    cout << "Result: " << result << endl;
-    result = arithmeticCalculator->calculate(5, 3, '-'); // Output: 2 (difference, using the overloaded function)
-    cout << "Result: " << result << endl;
+    Circle* circle = new Circle();
+    circle->draw();  // Output: Drawing a circle.
+    circle->calculateArea(3);  // Output: Area of the circle with radius 3 is 28.26
+
     cout << "\nName: Oshin Pant Roll NO:23 Lab_no:6.5";
     fflush(stdin);
     cin.get();
