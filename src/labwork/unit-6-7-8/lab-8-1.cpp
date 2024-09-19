@@ -28,4 +28,4 @@ int main(){
     cout << "\nName: Oshin Pant Roll NO:23 Lab_no:8.1";
     fflush(stdin);
     cin.get();
-}
+} 
